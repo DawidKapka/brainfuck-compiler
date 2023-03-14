@@ -4,6 +4,11 @@ int parseBrainfuck(char[]);
 int parseToken(char*, int**, char[], int*);
 
 int main(int argc, char** argv) {
+    if(argc == 1) {
+        printf("no file specified!");
+        return 1;
+    }
+
     FILE *fp;
     char buff[255];
 
