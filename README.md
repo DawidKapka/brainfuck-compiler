@@ -1,3 +1,3 @@
-# Brainfuck-Compiler
+# Brainfuck-Interpreter
 
-### self-made brainfuck-compiler because I had nothing else to do
+### self-made brainfuck-interpreterbecause I had nothing else to do
