@@ -25,7 +25,7 @@ int parseBrainfuck(char buff[]) {
         if (buff[i] == ']') { 
             if (*bfMemoryPt != 0) {
                 while (buff[i] != ']') {
-                    i = i - 1;
+                    --i;
                 }
             }
         }
@@ -49,11 +49,11 @@ int parseToken(char* token, int** memPt, char* buffer, int* indexPt) {
     } else if (*token == '[') {
         if (**memPt != 0) {
             int increases = 1;
-            *indexPt = *indexPt + 1;
+            ++(*indexPt);
             while (buffer[*indexPt] != ']') {
                 parseToken(&buffer[*indexPt], memPt, buffer, indexPt);
-                *indexPt = *indexPt + 1;
-                increases = increases + 1;
+                ++(*indexPt);
+                ++increases;
             }
             *indexPt = *indexPt - increases - 1;
 
