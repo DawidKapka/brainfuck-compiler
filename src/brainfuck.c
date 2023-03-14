@@ -6,7 +6,7 @@ int parseToken(char*, int**, char[], int*);
 int main(int argc, char** argv) {
     if(argc == 1) {
         printf("no file specified!");
-        return 1;
+        return 0;
     }
 
     FILE *fp;
@@ -18,7 +18,7 @@ int main(int argc, char** argv) {
 
     parseBrainfuck(buff);
 
-    return 0;
+    return 1;
 }
 
 int parseBrainfuck(char buff[]) {
