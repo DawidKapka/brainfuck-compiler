@@ -44,8 +44,7 @@ int parseToken(char* token, int** memPt, char* buffer, int* indexPt) {
     } else if (*token == '<') {
         --(*memPt);
     } else if (*token == '.') {
-        char c = **memPt;
-        printf("%c", c);
+        printf("%c", (char)**memPt);
     } else if (*token == '[') {
         if (**memPt != 0) {
             int increases = 1;
